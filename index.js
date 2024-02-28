@@ -1,11 +1,11 @@
 const paletteElements = document.querySelectorAll('header div');
+const paletteInput = document.querySelectorAll('header input');
 const mainElements = document.querySelectorAll('main div div');
 
 function selectColor(event)
 {
     let colorBox = event.target;
     let color = colorBox.style.backgroundColor;
-
     sessionStorage.setItem("selectedColor", color);
 }
 
@@ -25,6 +25,7 @@ function loadPalette(palette)
     // le code de l'étape 1 se passe ici
     for (let i = 0; i < paletteElements.length; i++){
         paletteElements[i].style.backgroundColor = palette[i];
+        paletteInput[i].value = palette[i];
     }
 }
 
@@ -35,6 +36,9 @@ window.addEventListener("DOMContentLoaded", function(){
     // le code de l'étape 2 se passe ici
     for (let i = 0; i < paletteElements.length; i++){
         paletteElements[i].addEventListener('click', selectColor);
+        paletteInput[i].addEventListener('change', function(){
+        paletteElements[i].style.backgroundColor = paletteInput[i].value;
+        });
     }
     // le code de l'étape 3 se passe ici
         sessionStorage.removeItem('selectedColor');
