@@ -22,6 +22,9 @@ function loadPalette(palette)
     let colors = palette;
 
     // le code de l'étape 1 se passe ici
+    const palettes = document.querySelectorAll('header div');
+    console.log(palettes)
+    for (let i = 0; i < palettes.length)
 }
 
 
