@@ -30,7 +30,7 @@ function loadPalette(palette)
 
 
 window.addEventListener("DOMContentLoaded", function(){
-    loadPalette(["#22f6f3", "#3daf7e", "#ffffff", "#ec8236", "#a9a7ee", "#ecc606", "#f783f2", "#e89e80"]);
+    loadPalette(["#22f6f3", "#3daf7e", "#ffffff", "#ec8236", "#a9a7ee", "#ecc606", "#f783f2", "#e89e80", "#bababa", '#4F9CD6', '#FF0000', '#C657F2', '#FF5900', '#F7D200', '#075759', '#000000']);
 
     // le code de l'étape 2 se passe ici
     for (let i = 0; i < paletteElements.length; i++){
