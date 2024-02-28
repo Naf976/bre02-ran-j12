@@ -28,4 +28,24 @@ body > main > div {
 body > main div div {
     border: 1px dotted #555555;
 }
-
+.screen-shot{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    padding: 1em;
+    background-color: #4C65B5;
+    color: #DEE0FF;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.screen-shot:hover{
+    background-color: #4C65e9;
+}
+.screen-result{
+    position: absolute;
+    left: 25%;
+    top: 5%;
+    width: 50%;
+    
+}

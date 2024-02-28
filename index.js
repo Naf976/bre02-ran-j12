@@ -1,6 +1,8 @@
 const paletteElements = document.querySelectorAll('header div');
 const paletteInput = document.querySelectorAll('header input');
 const mainElements = document.querySelectorAll('main div div');
+const btnCapture = document.querySelector('.screen-shot');
+const capture = document.querySelector('#capture');
 
 function selectColor(event)
 {
@@ -42,15 +44,27 @@ window.addEventListener("DOMContentLoaded", function(){
     }
     // le code de l'étape 3 se passe ici
         sessionStorage.removeItem('selectedColor');
+        
     for (let i = 0; i < mainElements.length; i++){
+        
         mainElements[i].addEventListener('click', function(){
+            
             if(!mainElements[i].style.backgroundColor){
             mainElements[i].style.backgroundColor = getSelectedColor();
-            } else {
+            } 
+            else {
                 mainElements[i].style.backgroundColor = '';
             }
         });
         
     }
+btnCapture.addEventListener('click', function() {
+    html2canvas(capture).then(function(canvas) {
+        canvas.setAttribute('class', 'screen-result')
+    document.body.appendChild(canvas);
+    console.log(canvas)
+    canvas.style.width = '';
+});
+})
 
 });
